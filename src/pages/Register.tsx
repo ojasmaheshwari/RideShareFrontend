@@ -67,7 +67,6 @@ const Register: React.FC = () => {
         <div className="auth-container">
             <div className="auth-card register-card">
                 <div className="auth-header">
-                    <div className="auth-logo">🚗</div>
                     <h1>Join RideShare</h1>
                     <p>Create your account to get started</p>
                 </div>
@@ -157,7 +156,6 @@ const Register: React.FC = () => {
                                     checked={formData.role === 'ROLE_USER'}
                                     onChange={handleChange}
                                 />
-                                <span className="role-icon">🧑‍💼</span>
                                 <span className="role-label">Passenger</span>
                                 <span className="role-desc">Book rides easily</span>
                             </label>
@@ -170,7 +168,6 @@ const Register: React.FC = () => {
                                     checked={formData.role === 'ROLE_DRIVER'}
                                     onChange={handleChange}
                                 />
-                                <span className="role-icon">🚘</span>
                                 <span className="role-label">Driver</span>
                                 <span className="role-desc">Earn by driving</span>
                             </label>

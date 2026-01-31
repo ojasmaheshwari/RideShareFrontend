@@ -78,3 +78,15 @@ export const ridesApi = {
     getDriverHistory: (page = 0, size = 10, sortBy = 'createdAt', sortDir = 'desc') =>
         api.get(`/api/rides/driver/history?page=${page}&size=${size}&sortBy=${sortBy}&sortDir=${sortDir}`),
 };
+
+// Payment API calls
+export const paymentApi = {
+    processPayment: (data: {
+        rideId: string;
+        amount: number;
+        paymentMethod: string;
+    }) => api.post('/api/v1/payments', data),
+
+    getPaymentHistory: (page = 0, size = 10) =>
+        api.get(`/api/v1/payments/my?page=${page}&size=${size}`),
+};

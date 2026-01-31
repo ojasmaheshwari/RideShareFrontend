@@ -66,7 +66,7 @@ const RideCard: React.FC<RideCardProps> = ({
 
             <div className="ride-locations">
                 <div className="location-item">
-                    <span className="location-icon pickup">📍</span>
+                    <span className="location-icon pickup">●</span>
                     <div className="location-details">
                         <span className="location-label">Pickup</span>
                         <span className="location-text">{ride.pickupLocation}</span>
@@ -78,7 +78,7 @@ const RideCard: React.FC<RideCardProps> = ({
                     <div className="divider-line"></div>
                 </div>
                 <div className="location-item">
-                    <span className="location-icon dropoff">🏁</span>
+                    <span className="location-icon dropoff">▼</span>
                     <div className="location-details">
                         <span className="location-label">Dropoff</span>
                         <span className="location-text">{ride.dropoffLocation}</span>
@@ -90,19 +90,19 @@ const RideCard: React.FC<RideCardProps> = ({
                 <div className="ride-info">
                     {ride.passengerName && (
                         <div className="info-item">
-                            <span className="info-icon">🧑</span>
+                            <span className="info-icon">P</span>
                             <span>{ride.passengerName}</span>
                         </div>
                     )}
                     {ride.driverName && (
                         <div className="info-item">
-                            <span className="info-icon">🚘</span>
+                            <span className="info-icon">D</span>
                             <span>{ride.driverName}</span>
                         </div>
                     )}
                     {ride.fare && (
                         <div className="info-item fare">
-                            <span className="info-icon">💰</span>
+                            <span className="info-icon">$</span>
                             <span>${ride.fare.toFixed(2)}</span>
                         </div>
                     )}

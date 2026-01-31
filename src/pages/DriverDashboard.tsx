@@ -118,7 +118,7 @@ const DriverDashboard: React.FC = () => {
 
             <main className="dashboard-main">
                 <div className="dashboard-header">
-                    <h1>Welcome, {user?.name}! 🚘</h1>
+                    <h1>Welcome, {user?.name}!</h1>
                     <p>Find available rides and start earning</p>
                 </div>
 
@@ -127,7 +127,7 @@ const DriverDashboard: React.FC = () => {
                         className={`tab-btn ${activeTab === 'available' ? 'active' : ''}`}
                         onClick={() => setActiveTab('available')}
                     >
-                        <span className="tab-icon">🔍</span>
+                        <span className="tab-icon">◯</span>
                         Available Rides
                         {availableRides.length > 0 && (
                             <span className="tab-badge">{availableRides.length}</span>
@@ -137,7 +137,7 @@ const DriverDashboard: React.FC = () => {
                         className={`tab-btn ${activeTab === 'active' ? 'active' : ''}`}
                         onClick={() => setActiveTab('active')}
                     >
-                        <span className="tab-icon">🚗</span>
+                        <span className="tab-icon">•</span>
                         My Active Rides
                         {activeRides.length > 0 && (
                             <span className="tab-badge">{activeRides.length}</span>
@@ -147,7 +147,7 @@ const DriverDashboard: React.FC = () => {
                         className={`tab-btn ${activeTab === 'history' ? 'active' : ''}`}
                         onClick={() => setActiveTab('history')}
                     >
-                        <span className="tab-icon">📜</span>
+                        <span className="tab-icon">≡</span>
                         History
                     </button>
                 </div>
@@ -162,7 +162,7 @@ const DriverDashboard: React.FC = () => {
                                     onClick={() => fetchAvailableRides(availablePage)}
                                     disabled={loadingAvailable}
                                 >
-                                    🔄 Refresh
+                                    ↻ Refresh
                                 </button>
                             </div>
 
@@ -173,7 +173,7 @@ const DriverDashboard: React.FC = () => {
                                 </div>
                             ) : availableRides.length === 0 ? (
                                 <div className="empty-state">
-                                    <span className="empty-icon">🔍</span>
+                                    <span className="empty-icon">◯</span>
                                     <h3>No Available Rides</h3>
                                     <p>There are no rides waiting to be picked up right now. Check back soon!</p>
                                 </div>
@@ -209,7 +209,7 @@ const DriverDashboard: React.FC = () => {
                                     onClick={fetchActiveRides}
                                     disabled={loadingActive}
                                 >
-                                    🔄 Refresh
+                                    ↻ Refresh
                                 </button>
                             </div>
 
@@ -220,7 +220,7 @@ const DriverDashboard: React.FC = () => {
                                 </div>
                             ) : activeRides.length === 0 ? (
                                 <div className="empty-state">
-                                    <span className="empty-icon">🚗</span>
+                                    <span className="empty-icon">◯</span>
                                     <h3>No Active Rides</h3>
                                     <p>You don't have any ongoing rides. Accept a ride to get started!</p>
                                     <button className="btn btn-primary" onClick={() => setActiveTab('available')}>
@@ -256,7 +256,7 @@ const DriverDashboard: React.FC = () => {
                                 </div>
                             ) : historyRides.length === 0 ? (
                                 <div className="empty-state">
-                                    <span className="empty-icon">📜</span>
+                                    <span className="empty-icon">≡</span>
                                     <h3>No Completed Rides</h3>
                                     <p>Your completed rides will appear here.</p>
                                 </div>
